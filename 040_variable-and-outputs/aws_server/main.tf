@@ -21,14 +21,9 @@ provider "aws" {
   region = "us-east-1"
 }
 
-locals {
+resource "aws_instance" "my_server" {
   ami           = "ami-087c17d1fe0178315"
   instance_type = var.instance_type
-}
-
-resource "aws_instance" "my_server" {
-  ami           = local.ami
-  instance_type = local.instance_type
 
 }
 
