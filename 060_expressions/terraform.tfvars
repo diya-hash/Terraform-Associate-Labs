@@ -1,13 +1,11 @@
-worlds=["barsoon","jasoom","sasoom","cosoom"]
-worlds_map={
-	"barsoon": "mars",
-	"jasoom": "earth",
-	"sasoom": "jupiter",
-	"cosoom": "venus"
+planets = ["pluto", "saturn", "earth"]
+planet_map = {
+  "pluto" : "visible",
+  "earth" : "life",
+  "saturn" : "beautiful"
 }
-worlds_splat=[
-	{mars_name: "barsoon", earth_name: "mars"},
-	{mars_name: "jasoom", earth_name: "earth"},
-	{mars_name: "sasoom", earth_name: "jupiter"},
-	{mars_name:"cosoom",  earth_name: "venus" }
+planet_splats = [
+  { planet_name : "pluto", decribe_planet : "visible" },
+  { planet_name : "earth", decribe_planet : "life" },
+  { planet_name : "saturn", decribe_planet : "beautiful" }
 ]

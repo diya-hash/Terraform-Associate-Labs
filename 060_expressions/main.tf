@@ -1,15 +1,13 @@
 terraform {
 
 }
-
-variable "worlds" {
-	type = list
+variable "planets" {
+  type = list(any)
 }
 
-variable "worlds_map" {
-	type = map
+variable "planet_map" {
+  type = map(any)
 }
-
-variable "worlds_splat" {
-	type = list
+variable "planet_splats" {
+  type = list(any)
 }
