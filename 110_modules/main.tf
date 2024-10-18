@@ -1,20 +1,14 @@
-terraform {
+terraform{
 
 }
-
-provider "aws" {
-  region = "us-east-1"
-}
-
 module "apache" {
-	source = ".//terraform-aws-apache-example"
-	vpc_id = "vpc-bd9bdcc7"
-	my_ip_with_cidr = "104.194.51.113/32"
-	public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdgyskPBKxTa4G8rIT76MP1zKfL4Xv9UBn/k/p7bEQYLPzhGQfdki3em2Hnh/wGzjeRJsRCCgezMnyirOizm3jXbob5F9QVBGbwn0cQMu1CW9Dx59ce+vJQtz9ezCAocko7W8oij3fr0npJWVQchxiR+yI5lm1PexaESYTTmz/ImzmeF2AJNRDqKR4xFrK9kM22GOm2kd7YYXIxpqDOMZ7j7v1HHU9v9CwgHCGbq0c09EshCXLx0GZ7r3BjRun8vQ9OxgVGIf62MQAUbMPKR0oq84X5oVv/2a4d79Bx46Ttj1xlzP8UHgWrUKHUbpFZ6AZEMMIsLOzoduLk8eCzNvPWH/SkaEoc2ww+7+Ii0fDyeycTHzewQtXxyyzNDyFrZj8b08c+Pg1h26PClMNajUF4eBO8+u4ZbcvsDMdXKimvYeRXXaFMciy6NcMCq0ZwtwvmLsId+pm9Gu1WS/QG3JmRYUSMzc1FPZG9DI2aI3ivG3HQEuYe25hhik6adw24lk= root@DESKTOP-J1KCQ03"
-	instance_type = "t2.micro"
- 	server_name = "Apache Example Server"
+ source = ".//terraform-aws-apache-example"
+ vpc_id = "vpc-06d5575973a832582"
+ my_ip_with_cidr = "99.240.67.76"
+ public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCkNvI+H3XQUQAxor2xxx0QY2jwJwhPhP1mD+ETduDy/u58jkO9PZdr6uD9/7akNi8Hi48hwl9w9EACO5vgfD4H4OQ2KMOl8/0JCyhMQSiGISSc+j3Af9xfzgIP4qbRNSLpcIRLLEBFAJuE2vXpkhM4MCSF+jeksNXRLdfm3HyMVQiGnxIR1o/gEutLqdiQWxTMaxA0BICmU4IoyrmLN+jfpPdDq1GPvBWCoDVbDxYFjxabMq31g6SEBlZXsj2orpffJVgBA4zSqlzaUlttsE/oXHb7QZQ54omQAW+xMyecThN7LpyG/f/gLV95gHg2J02CGl10QdUDHQYnDMb522kwUiiu1iMvdnngssMmLMF+vbkDNmkRnquSh7f0qWyE87or9lqwx9KIbjCyYWJYoD4TjzpTCp+PAAlCCa0MiorBX2N5LOS7nB9iLtyZPo8+Fu6E/XBhtalb9t+4dV3BhcVaYuL9aGMWECQBHQMEmDQG9y9gpMJFqJxsj5ANyrTW+UE= shaikhdiyasalam@Shaikhs-MacBook-Air.local"
+ instance_type = "t2.micro"
+ server_name = "Apache Example server"
 }
-
 output "public_ip" {
   value = module.apache.public_ip
 }
