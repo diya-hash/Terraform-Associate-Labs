@@ -1,20 +1,19 @@
 terraform {
 
 }
-
 variable "str" {
-	type = string
-	default = ""
+  type    = string
+  default = ""
 }
 variable "items" {
-	type = list
-	default = [null,null,"","last"]
-}
+  type    = list(any)
+  default = [null, null, "hello", "", "last"]
 
+}
 variable "stuff" {
-	type = map
-	default = {
-		"hello" = "world",
-		"goodbye" = "moon"
-	}
+  type = map(any)
+  default = {
+    "animal" = "koala"
+    "insect" = "butterfly"
+  }
 }
